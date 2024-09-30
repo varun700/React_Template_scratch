@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'antd/dist/antd.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* Create a default cascade layer for Tailwind */
+
+
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "inter", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for the specific component */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  /* Set the width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  /* Gray color for the scrollbar thumb */
+  border-radius: 10px;
+  /* Rounded edges for the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+  /* Darker color on hover */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Transparent track background */
+}
+
+.ant-col {
+  padding: 8px;
+}
+
+.ant-card-body {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+
+}
