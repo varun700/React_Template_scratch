@@ -2,6 +2,9 @@ import { Card, Row, Col } from "antd";
 import React from "react";
 import Topwidget from "./components/Topwidget";
 import { FaRegCalendarCheck } from "react-icons/fa";
+import Rectbarchart from "./charts/rectbarchart";
+import Secondpiechart from "./charts/piechart";
+import Horibarchart from "./charts/horibarchart";
 
 const Hello = () => {
   return (
@@ -63,6 +66,25 @@ const Hello = () => {
               percentage="32.4%"
               Icon={FaRegCalendarCheck}
             />
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Card className="rounded-xl border border-gray-300">
+            <Rectbarchart />
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={12}>
+          <Card className="rounded-xl border border-gray-300">
+            <Secondpiechart />
+          </Card>
+        </Col>
+        <Col span={12}>
+          <Card className="rounded-xl border border-gray-300">
+            <Horibarchart />
           </Card>
         </Col>
       </Row>
