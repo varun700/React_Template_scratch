@@ -1,10 +1,11 @@
 import { Card, Row, Col } from "antd";
 import React from "react";
-import Topwidget from "./components/Topwidget";
+import Topwidget from "../../components/Topwidget";
 import { FaRegCalendarCheck } from "react-icons/fa";
-import Rectbarchart from "./charts/rectbarchart";
-import Secondpiechart from "./charts/piechart";
-import Horibarchart from "./charts/horibarchart";
+import AntdTable from "../../components/AntdTable";
+import Rectbarchart from "../../charts/horibarchart";
+import Secondpiechart from "../../charts/piechart";
+import Horibarchart from "../../charts/horibarchart";
 
 const Hello = () => {
   return (
@@ -85,6 +86,13 @@ const Hello = () => {
         <Col span={12}>
           <Card className="rounded-xl border border-gray-300">
             <Horibarchart />
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Card className="rounded-xl border border-gray-300 table_card">
+            <AntdTable />
           </Card>
         </Col>
       </Row>

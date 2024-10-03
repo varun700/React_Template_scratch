@@ -88,6 +88,13 @@ body {
   padding-bottom: 1.75rem;
 }
 
+.table_card .ant-card-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .apexcharts-menu-icon {
   display: none;
 }
