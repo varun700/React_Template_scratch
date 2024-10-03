@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 // import Hello from "./Hello";
 import Layout from "./layout";
-import Hello from "./Hello";
+import Hello from "./pages/Dashboard/index";
 const router = createBrowserRouter([
   {
     path: "/",

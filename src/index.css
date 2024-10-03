@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import 'antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "antd/dist/antd.css";
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Create a default cascade layer for Tailwind */
-
-
 
 /* Reset styles */
 *,
@@ -96,4 +93,8 @@ body {
   padding-right: 1rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.apexcharts-menu-icon {
+  display: none;
 }
