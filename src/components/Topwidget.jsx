@@ -8,7 +8,7 @@ const Topwidget = ({ heading, value, trend, percentage, Icon, bg }) => {
         <div
           className={`flex rounded-[14px] ${
             bg ? "bg-[#FFFFFF]" : "bg-[#2B7F75]"
-          } bg-[#FFFFFF] p-2.5 text-gray-0 w-12 h-11 justify-center items-center`}
+          }  p-2.5 text-gray-0 w-12 h-11 justify-center items-center`}
         >
           <Icon className={`${bg ? "text-[#2B7F75]" : "text-white"} w-6 h-6`} />
         </div>

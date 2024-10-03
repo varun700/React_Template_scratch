@@ -2,6 +2,7 @@ import { Card, Row, Col } from "antd";
 import React from "react";
 import Topwidget from "./components/Topwidget";
 import { FaRegCalendarCheck } from "react-icons/fa";
+import AntdTable from "./components/AntdTable";
 
 const Hello = () => {
   return (
@@ -63,6 +64,13 @@ const Hello = () => {
               percentage="32.4%"
               Icon={FaRegCalendarCheck}
             />
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Card className="rounded-xl border border-gray-300 table_card">
+            <AntdTable />
           </Card>
         </Col>
       </Row>
