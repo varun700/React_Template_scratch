@@ -14,11 +14,11 @@ const HOVER_COLORS = ["#1F6B62", "#FFD55B", "#125A70", "#52B7B0"];
 export default function SecondPieChart() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleMouseEnter = (index) => {
+  const onPieEnter = (data, index) => {
     setActiveIndex(index);
   };
 
-  const handleMouseLeave = () => {
+  const onPieLeave = () => {
     setActiveIndex(null);
   };
 
@@ -58,26 +58,25 @@ export default function SecondPieChart() {
               dataKey="value"
               cx="50%"
               cy="50%"
-              innerRadius={50}
-              outerRadius={
-                activeIndex !== null
-                  ? (index) => (index === activeIndex ? 100 : 90)
-                  : 90
-              } // Change radius based on active index
+              innerRadius={70}
+              // outerRadius={activeIndex !== null ? 110 : 90} // Change radius based on active index
               fill="#82ca9d"
               paddingAngle={5}
               cornerRadius={10}
+              onMouseEnter={onPieEnter}
+              onMouseLeave={onPieLeave}
             >
               {data02.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
-                  fill={
-                    activeIndex === index
-                      ? HOVER_COLORS[index % HOVER_COLORS.length]
-                      : COLORS[index % COLORS.length]
-                  }
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
+                  fill={COLORS[index]}
+                  // Apply scale for the hovered slice
+                  style={{
+                    transform:
+                      index === activeIndex ? "scale(1)" : "scale(0.8)",
+                    transformOrigin: "center", // Ensure the slice grows from its center
+                    transition: "transform 0.3s ease",
+                  }}
                 />
               ))}
             </Pie>
@@ -104,7 +103,7 @@ export default function SecondPieChart() {
                 fontWeight: activeIndex === index ? "bold" : "normal",
               }}
               onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
+              // onMouseLeave={handleMouseLeave}
             >
               {/* Color box */}
               <div
