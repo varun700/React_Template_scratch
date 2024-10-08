@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
 const Horibarchart = () => {
-  const [chartData, setChartData] = useState({
+  const [chartData] = useState({
     series: [
       {
         data: [

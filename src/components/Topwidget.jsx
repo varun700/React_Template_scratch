@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosTrendingUp } from "react-icons/io";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Topwidget = ({ heading, value, trend, percentage, Icon, bg }) => {
   return (
     <div className="flex flex-col">

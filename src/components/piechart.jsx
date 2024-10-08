@@ -9,7 +9,7 @@ const data02 = [
 ];
 
 const COLORS = ["#2B7F75", "#FFD66B", "#176B87", "#64CCC5"];
-const HOVER_COLORS = ["#1F6B62", "#FFD55B", "#125A70", "#52B7B0"];
+// const HOVER_COLORS = ["#1F6B62", "#FFD55B", "#125A70", "#52B7B0"];
 
 export default function SecondPieChart() {
   const [activeIndex, setActiveIndex] = useState(null);
