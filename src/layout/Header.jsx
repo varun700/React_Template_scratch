@@ -1,6 +1,30 @@
+import React, { useState } from "react";
+import { Button, Popover, Avatar, List } from "antd";
 import { MdNotificationsActive, MdOutlineMessage } from "react-icons/md";
 
+const data = [
+  {
+    title: "Wade Warren",
+  },
+  {
+    title: "Jane Cooper",
+  },
+  {
+    title: "Leslie Alexander",
+  },
+  {
+    title: "John Doe",
+  },
+];
+
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const hide = () => {
+    setOpen(false);
+  };
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
+  };
   return (
     <div className="flex justify-between p-4 items-center">
       {/* //searchbar */}
@@ -28,7 +52,39 @@ const Navbar = () => {
           //  className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative"
           className="inline-flex items-center justify-center active:enabled:translate-y-px focus:outline-none focus-visible:ring-[1.8px] focus-visible:ring-offset-2 ring-offset-background transition-colors duration-200 p-1 rounded hover:text-primary focus-visible:ring-primary-lighter relative h-[34px] w-[34px] shadow backdrop-blur-md dark:bg-gray-100 md:h-9 md:w-9"
         >
-          <MdOutlineMessage className="text-lg" />
+          <Popover
+            content={
+              <div style={{ width: "400px" }}>
+                <a onClick={hide}>
+                  <List
+                    itemLayout="horizontal"
+                    dataSource={data}
+                    renderItem={(item, index) => (
+                      <List.Item>
+                        <List.Item.Meta
+                          avatar={
+                            <Avatar
+                              src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${index}`}
+                            />
+                          }
+                          title={<a href="https://ant.design">{item.title}</a>}
+                          description="It is nice to be chatting with you. Omnis, qui"
+                        />
+                      </List.Item>
+                    )}
+                  />
+                </a>
+              </div>
+            }
+            // overlayStyle={{ width: "600px" }}
+            placement="bottomRight"
+            title="Messages"
+            trigger="click"
+            open={open}
+            onOpenChange={handleOpenChange}
+          >
+            <MdOutlineMessage className="text-lg" />
+          </Popover>
           <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white rounded-full text-xs">
             1
           </div>
